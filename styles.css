@@ -1,0 +1,168 @@
+/* Reset margin and padding for clean layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Lora;
+  background-color: #b7561b; /* Light background to highlight shadow */
+}
+
+/* Video Container Styling */
+.video-container {
+  position: relative;
+  width: 90%;       /* Set width to 80% of the viewport */
+  max-width: 1000px; /* Set maximum width for larger screens */
+  aspect-ratio: 4.7/3; /* Keeps the video in 4:3 aspect ratio */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  overflow: hidden;
+  border-radius: 8px; /* Optional: rounded corners */
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Dropdown Menu Styling */
+.dropbtn {
+  background-color: #b7561b;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropbtn img {
+  width: 82px;            /* Smaller size for the icon */
+  height: 82px;           /* Ensures the image remains a square */
+  border-radius: 50%;     /* Makes the icon circular */
+  position: absolute;     /* Positioning for placement in the corner */
+  top: 10px;              /* Adjusts the distance from the top */
+  right: 10px;            /* Adjusts the distance from the right */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+}
+
+.dropdown {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  top:90px;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+.dropdown-content a:hover {
+  background-color: #575757;
+}
+
+/* Show the dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.about-text {
+  max-width: 950px;  
+  font-size: larger;
+  text-align: center; /* Center-align the text */
+  line-height: 1.6; /* Improve readability by adjusting line height */
+  color: #333; /* Set text color */
+  background-color: #fbf4df; /* White background for the text area */
+  padding: 20px; /* Add padding around the text */
+  border-radius: 8px; /* Optional: Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+.home{
+  background-color: #b7561b;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home img{
+  width: 82px;            
+  height: 82px;           
+  border-radius: 50%;     
+  position: absolute;     
+  top: 30px;              
+  right: 30px;           
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.intro-section {
+  position: absolute;
+  top: 20px;
+  left: 70px;
+  max-width: 800px;
+}
+
+.intro-section h1 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.intro-section .intro-text {
+  font-size: 1rem;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+/* Audio container layout */
+.audio-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two-column layout */
+  gap: 20px;
+  width: 100%;
+  max-width: 800px;
+  margin: 120px auto 0 auto;
+}
+
+/* Audio item styling */
+.audio-item {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.audio-item p {
+  margin: 0 0 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+audio {
+  width: 100%;
+  outline: none;
+}

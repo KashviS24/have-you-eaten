@@ -41,3 +41,24 @@ function handleStop() {
 document.querySelectorAll('.audio-item').forEach(item => {
     item.addEventListener('click', handleClick);  // On click start audio/video
 });
+
+
+function togglePlay(audioId) {
+    const audio = document.getElementById(audioId);
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }
+  
+  function updateProgress(audioId, value) {
+    const audio = document.getElementById(audioId);
+    const progress = audio.duration * (value / 100);
+    audio.currentTime = progress;
+  }
+  
+  function toggleMute(audioId) {
+    const audio = document.getElementById(audioId);
+    audio.muted = !audio.muted;
+  }

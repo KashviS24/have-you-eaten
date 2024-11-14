@@ -9,27 +9,30 @@ body, html {
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: Lora;
+  font-family: BradleyHand;
+  font-size: large;
   background-color: #b7561b; /* Light background to highlight shadow */
 }
 
-/* Video Container Styling */
-.video-container {
-  position: relative;
-  width: 90%;       /* Set width to 80% of the viewport */
-  max-width: 1000px; /* Set maximum width for larger screens */
-  aspect-ratio: 4.7/3; /* Keeps the video in 4:3 aspect ratio */
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow */
-  overflow: hidden;
-  border-radius: 8px; /* Optional: rounded corners */
+
+@font-face {
+  font-family: 'BradleyHand';
+  src: url('Assets/Bradley\ Hand\ Bold.ttf'); 
 }
 
+#video-page .video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* Ensure the video takes up full container size */
 .video-container video {
-  width: 100%;
-  height: 100%;
+  width: 87%;
+  height: 90%;
   object-fit: cover;
+  border-radius: 40px;
 }
 
 /* Dropdown Menu Styling */
@@ -87,7 +90,7 @@ body, html {
 }
 
 
-.about-text {
+#about-page .about-text {
   max-width: 950px;  
   font-size: larger;
   text-align: center; /* Center-align the text */
@@ -97,9 +100,12 @@ body, html {
   padding: 20px; /* Add padding around the text */
   border-radius: 8px; /* Optional: Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+  justify-content: center;
+  align-items: center;
+  margin: auto auto;
 }
 
-.home{
+.home {
   background-color: #b7561b;
   border: none;
   cursor: pointer;
@@ -109,55 +115,60 @@ body, html {
   justify-content: center;
 }
 
-.home img{
-  width: 82px;            
-  height: 82px;           
-  border-radius: 50%;     
-  position: absolute;     
-  top: 30px;              
-  right: 30px;           
+.home img {
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  position: absolute;
+  top: 30px;
+  right: 30px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 40px;
+  max-width: 110vw;
+  margin-left: 30px;
+  overflow-y: hidden;
+}
+
 .intro-section {
-  position: absolute;
-  top: 20px;
-  left: 70px;
-  max-width: 800px;
+  color: wheat;
+  max-width: 80vw;
 }
 
 .intro-section h1 {
-  font-size: 1.8rem;
-  margin: 0;
+  color: #fbf4df;
 }
 
 .intro-section .intro-text {
   font-size: 1rem;
-  margin-top: 10px;
+  color: rgb(225, 210, 183);
   line-height: 1.5;
+  margin-bottom: 30px;
 }
 
-/* Audio container layout */
+/* Audio container styles */
 .audio-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Two-column layout */
-  gap: 20px;
-  width: 100%;
-  max-width: 800px;
-  margin: 120px auto 0 auto;
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 40px;
 }
 
-/* Audio item styling */
 .audio-item {
-  background-color: #fff;
+  background-color: #fbf4df;
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
 }
 
 .audio-item p {
-  margin: 0 0 10px;
+  margin-bottom: 5px;
   font-weight: bold;
   color: #333;
 }
@@ -166,3 +177,37 @@ audio {
   width: 100%;
   outline: none;
 }
+
+.audio-item:hover {
+  background-color: #e0d4bb;
+  cursor: pointer;
+}
+
+.audio-video-wrapper {
+  width: 150vw;
+  display: flex;
+  gap: 40px; /* Space between audio and video */
+  align-items: flex-start; /* Aligns items at the top */
+  overflow-y: scroll;
+}
+
+.video-box {
+  flex: 1; /* Allows the video to take up available space */
+  flex-direction: column;
+  display: flex;
+  max-width: 600px;
+  gap: 30px;
+}
+
+.video-box video {
+    width: 65vw;
+    height: 20vw;
+    object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.video-box-2{
+  width: 60vw;
+}
+

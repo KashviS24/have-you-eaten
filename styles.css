@@ -1,5 +1,4 @@
-/* Reset margin and padding for clean layout */
-* {
+ {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -21,23 +20,18 @@ body, html {
 }
 
 #video-page .video-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0;
+  margin: 0 auto;
 }
 
 /* Ensure the video takes up full container size */
 .video-container video {
-  width: 100%;
-  height: 100%;
+  width: 87%;
+  height: 90%;
   object-fit: cover;
-  border-radius: 0;
+  border-radius: 40px;
 }
 
 /* Dropdown Menu Styling */
@@ -52,13 +46,13 @@ body, html {
 }
 
 .dropbtn img {
-  width: 82px;            
-  height: 82px;           
-  border-radius: 50%;     
-  position: absolute;     
-  top: 10px;             
-  right: 10px;         
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  width: 82px;            /* Smaller size for the icon */
+  height: 82px;           /* Ensures the image remains a square */
+  border-radius: 50%;     /* Makes the icon circular */
+  position: absolute;     /* Positioning for placement in the corner */
+  top: 10px;              /* Adjusts the distance from the top */
+  right: 10px;            /* Adjusts the distance from the right */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
 }
 
 .dropdown {
